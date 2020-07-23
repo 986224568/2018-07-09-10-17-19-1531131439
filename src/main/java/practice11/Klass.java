@@ -27,7 +27,7 @@ public class Klass {
             return;
         }
         this.leader = student;
-        notifyObserver(1, student);
+        notifyObserver(State.addLeader.getIndex(), student);
     }
 
     public Student getLeader() {
@@ -36,7 +36,7 @@ public class Klass {
 
     public void appendMember(Student student) {
         student.setKlass(this);
-        notifyObserver(2, student);
+        notifyObserver(State.addMember.getIndex(), student);
     }
 
     public void addObserver(Observer observer) {

@@ -44,9 +44,9 @@ public class Teacher extends Person implements Observer{
 
     @Override
     public void update(int state, Student student) {
-        if (state == 1) {
+        if (state == State.addLeader.getIndex()) {
             System.out.print("I am " + this.name + ". I know " + student.getName() + " become Leader of Class " + student.getKlass().getNumber() + ".\n");
-        } else if (state == 2) {
+        } else if (state == State.addMember.getIndex()) {
             System.out.print("I am " + this.name + ". I know " + student.getName() + " has joined Class " + student.getKlass().getNumber() + ".\n");
         }
     }
